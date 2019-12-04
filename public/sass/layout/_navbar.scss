@@ -1,0 +1,21 @@
+/* ---------------------------- Start navbar -------------------------------*/
+.page-navbar{
+  background-color: $mGray;
+  color: #fff;
+  padding: 10px 50px;
+  display: flex;
+  justify-content: space-between;
+  p{
+    padding-top: 4px;
+    margin-bottom: 0;
+    text-transform: capitalize;
+  }
+  .btn{
+    font-size: 14px;
+    &:hover{
+      background-color: $mYellow;
+      border-color: $mYellow;
+    }
+  }
+}
+/* ---------------------------- End navbar -------------------------------*/

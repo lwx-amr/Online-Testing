@@ -1,0 +1,44 @@
+/* ---------------------------- Start Global ----------------------------*/
+body{
+  font-family: sans-serif;
+}
+h1{
+  margin-top: 140px;
+}
+.btn{
+  padding: 5px 25px;
+  width: auto;
+  display: inline-block;
+  color: #fff;
+  margin: 0 20px;
+  &:hover{
+    color: #fff;
+  }
+}
+.btn-trans{
+  border: 1px solid #fff;
+}
+.btn-yellow{
+  background-color: $mYellow;
+}
+a,
+a:hover,
+a:focus{
+    text-decoration: none;
+}
+.e-msg {
+  margin-top: 10px;
+  display: inline-block;
+  color: $eRed;
+  font-size: 11px;
+  display: none; 
+}
+.have-error{
+  .e-msg{
+    display: block;
+  }
+  input{
+    box-shadow: 0 0 3px 2px $eRed;
+  }
+}
+/* ---------------------------- End Global ----------------------------*/

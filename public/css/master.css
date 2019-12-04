@@ -1,0 +1,122 @@
+/* ---------------------------- Start Global ----------------------------*/
+body {
+  font-family: sans-serif; }
+
+h1 {
+  margin-top: 140px; }
+
+.btn {
+  padding: 5px 25px;
+  width: auto;
+  display: inline-block;
+  color: #fff;
+  margin: 0 20px; }
+  .btn:hover {
+    color: #fff; }
+
+.btn-trans {
+  border: 1px solid #fff; }
+
+.btn-yellow {
+  background-color: #e0a900; }
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none; }
+
+.e-msg {
+  margin-top: 10px;
+  display: inline-block;
+  color: #e22525;
+  font-size: 11px;
+  display: none; }
+
+.have-error .e-msg {
+  display: block; }
+.have-error input {
+  box-shadow: 0 0 3px 2px #e22525; }
+
+/* ---------------------------- End Global ----------------------------*/
+/* ---------------------------- Start navbar -------------------------------*/
+.page-navbar {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 50px;
+  display: flex;
+  justify-content: space-between; }
+  .page-navbar p {
+    padding-top: 4px;
+    margin-bottom: 0;
+    text-transform: capitalize; }
+  .page-navbar .btn {
+    font-size: 14px; }
+    .page-navbar .btn:hover {
+      background-color: #e0a900;
+      border-color: #e0a900; }
+
+/* ---------------------------- End navbar -------------------------------*/
+/* ---------------------------- Start pages -------------------------------*/
+.home {
+  background-color: #333;
+  color: #fff; }
+  .home .buttons {
+    margin-top: 140px; }
+  .home .text {
+    margin-top: 50px; }
+
+/* ---------------------------- End pages -------------------------------*/
+/* ---------------------------- Start pages -------------------------------*/
+.access {
+  background-color: #e1e1e1; }
+  .access .box {
+    width: 360px;
+    padding: 20px 30px;
+    margin: auto;
+    margin-top: 100px;
+    background-color: #fafafa;
+    color: #2a2a2a; }
+    .access .box h2 {
+      margin: 20px 0 50px;
+      font-size: 20px; }
+    .access .box .btn {
+      margin: 0;
+      background-color: #e0a900;
+      border: 0; }
+    .access .box label {
+      font-size: 14px; }
+    .access .box .row {
+      justify-content: space-between; }
+    .access .box .btn {
+      margin-top: 20px; }
+    .access .box .tail {
+      margin-top: 30px;
+      font-size: 14px; }
+  .access.register .box {
+    width: 540px; }
+  .access.register label {
+    width: 120px !important; }
+
+/* ---------------------------- End pages -------------------------------*/
+/* ---------------------------- Start pages -------------------------------*/
+.feed .aviable-positions {
+  margin-top: 80px; }
+  .feed .aviable-positions h3 {
+    text-transform: capitalize;
+    margin-bottom: 40px;
+    color: #333; }
+  .feed .aviable-positions .position {
+    border: 1px solid #5a5a5a;
+    margin-bottom: 30px; }
+    .feed .aviable-positions .position h6 {
+      padding: 10px 20px;
+      background-color: #5a5a5a;
+      color: #fff; }
+      .feed .aviable-positions .position h6:hover {
+        background-color: #333; }
+    .feed .aviable-positions .position .text {
+      padding: 20px; }
+
+/* ---------------------------- End pages -------------------------------*/
+
+/*# sourceMappingURL=master.css.map */

@@ -1,0 +1,106 @@
+// media
+@mixin res($from,$to){
+  @if $from == 0 {
+    @media( max-width: #{$to}){
+      @content;
+    }
+  }
+  @else if $to == 0 {
+    @media( min-width: #{$from}){
+      @content;
+    }
+  }
+  @else{
+    $to : $to - 1px;
+    @media( min-width: #{$from}) and ( max-width: #{$to}){
+      @content;
+    }
+  }
+}
+
+//Breakpoint Media Queries
+@mixin maxMob {
+  @media (max-width: 575px){
+    @content;
+  }
+}
+@mixin minSm {
+  @media (min-width: 576px){
+    @content;
+  }
+}
+@mixin maxSm {
+  @media (max-width: 767px){
+    @content;
+  }
+}
+@mixin btSm {
+  @media (min-width:576px) and (max-width: 767px){
+    @content;
+  }
+}
+@mixin minMd {
+  @media (min-width: 768px){
+    @content;
+  }
+}
+@mixin maxMd {
+  @media (max-width: 991px){
+    @content;
+  }
+}
+@mixin btMd {
+  @media (min-width:768px) and (max-width: 991px){
+    @content;
+  }
+}
+@mixin minLg {
+  @media (min-width: 992px){
+    @content;
+  }
+}
+@mixin maxLg {
+  @media (max-width: 1199px){
+    @content;
+  }
+}
+@mixin btLg {
+  @media (min-width:992px) and (max-width: 1199px){
+    @content;
+  }
+}
+@mixin maxXl {
+  @media (max-width: 1439px){
+    @content;
+  }
+}
+@mixin minXl{
+  @media (min-width: 1200px){
+    @content;
+  }
+}
+@mixin btXl{
+  @media (min-width:1200px) and (max-width: 1439px){
+    @content;
+  }
+}
+@mixin minXXl{
+  @media (min-width: 1440px){
+    @content;
+  }
+}
+@mixin maxXXl {
+  @media (max-width:  1919px){
+    @content;
+  }
+}
+@mixin btXXl{
+  @media (min-width:1440px) and (max-width: 1919px){
+    @content;
+  }
+}
+@mixin minXXXl {
+  @media (min-width:  1920px){
+    @content;
+  }
+}

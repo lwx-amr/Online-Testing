@@ -1,0 +1,27 @@
+/* ---------------------------- Start pages -------------------------------*/
+.feed{
+  .aviable-positions{
+    margin-top: 80px;
+    h3{
+      text-transform: capitalize;
+      margin-bottom: 40px;
+      color: $mGray;
+    }
+    .position{
+      border: 1px solid $mlGray;
+      margin-bottom: 30px;
+      h6{
+        padding:10px 20px;
+        background-color: $mlGray;
+        color: #fff;
+        &:hover{
+          background-color: $mGray;
+        }
+      }
+      .text{
+        padding: 20px;
+      }
+    }
+  }
+}
+/* ---------------------------- End pages -------------------------------*/

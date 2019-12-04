@@ -1,0 +1,43 @@
+/* ---------------------------- Start pages -------------------------------*/
+.access{
+  background-color: $llGray;
+  .box{
+    width: 360px;
+    padding: 20px 30px;;
+    margin: auto;
+    margin-top: 100px;
+    background-color: $alW;
+    color: $dGray;
+    h2{
+      margin: 20px 0 50px;
+      font-size: 20px;
+    }
+    .btn{
+      margin: 0;
+      background-color: $mYellow;
+      border: 0;
+    }
+    label{
+      font-size: 14px;
+    }
+    .row{
+      justify-content: space-between;
+    }
+    .btn{
+      margin-top: 20px;
+    }
+    .tail{
+      margin-top: 30px;
+      font-size: 14px;
+    }
+  }
+  &.register{
+    .box{
+        width:540px;
+    }
+    label{
+      width: 120px !important;
+    }
+  }
+}
+/* ---------------------------- End pages -------------------------------*/
