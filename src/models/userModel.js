@@ -18,6 +18,11 @@ const userSchema = new Schema({
     phone: {
         type: Number,
         required: false
+    },
+    rule:{
+        type: String,
+        required: false,
+        default: "user"
     }
 });
 

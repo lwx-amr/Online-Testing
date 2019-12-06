@@ -1,0 +1,64 @@
+/* ---------------------------- Start pages -------------------------------*/
+.hr-panel{
+  .content-area{
+    width: 80%;
+    margin: auto;
+  }
+  .search-bar{
+    margin:100px 0 160px;
+    .box{
+      display: flex;
+      .form-group{
+        margin: 0;
+        flex: auto;
+        input{
+          border-radius: 5px 0px 0 5px;
+          border-right: 0;
+        }
+      }
+      .btn{
+        margin: 0;
+        display: block;
+        border-radius: 0px 5px 5px 0;
+      }
+    }
+    .filters{
+      margin-top: 15px;
+      border-bottom: 1px solid $llGray;
+      ul{
+        margin-bottom: 5px;
+        li{
+          display: inline-block;
+          font-size: 14px;
+          margin-right: 20px;
+          color: $mllGray;
+          cursor: pointer;
+          &.active{
+            color: $mlGray;
+          }
+        }
+      }
+    }
+  }
+  .actions{
+    h4{
+      font-size: 26px;
+      margin-bottom: 60px;
+    }
+    ul{
+      text-align: center;
+      li{
+        display: inline-block;
+        margin: 0 10px;
+        background-color: $bBlue;
+        border-radius: 5px;
+        a{
+          padding: 4px 30px;
+          display: inline-block;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+/* ---------------------------- End pages -------------------------------*/

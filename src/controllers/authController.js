@@ -5,11 +5,8 @@ function registerNewUser(req, res){
     let newUser = UserModel(req.body); 
     newUser.save(function(err, user){
         if(err)
-            return res.status(400).send({
-                message: err
-            });
-        console.log(user);
-        res.status(200).send(user);
+            return res.status(400).redirect('/register');
+        res.status(200).redirect('/');
     });
 };
 
@@ -38,7 +35,11 @@ function login(req, res){
             if(user.password==req.body.password){
                 session.id = user.id;
                 session.username = user.email;
-                return res.status(200).redirect('/feed');
+                session.rule = user.rule;
+                if(session.rule==='user')
+                    return res.status(200).redirect('/feed');
+                if(session.rule==='hr')
+                    return res.status(200).redirect('/hr-panel');
             } else {
                 return res.status(400).redirect('/login');
             }
@@ -47,18 +48,26 @@ function login(req, res){
 };
 
 function loginRequired(req, res, next){
-    if(session.id)
+    if(session.id && session.rule==='user')
+        next();
+    else
+        return res.status(200).redirect('/login');
+};
+
+function hrLoginRequired(req, res, next){
+    if(session.id && session.rule==='hr')
         next();
     else
         return res.status(200).redirect('/login');
 };
 
 function logout(req, res){
-    req.session.id = undefined;
-    req.session.email = undefined;
+    session.id = undefined;
+    session.email = undefined;
+    session.rule = undefined;
     req.session.destroy(function(err){
         res.status(200).redirect('/');
     });
-}
+};
 
-module.exports = {registerNewUser, checkUserExists, login, loginRequired, logout};
+module.exports = {registerNewUser, checkUserExists, login, loginRequired, hrLoginRequired, logout};

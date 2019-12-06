@@ -118,5 +118,52 @@ a:focus {
       padding: 20px; }
 
 /* ---------------------------- End pages -------------------------------*/
+/* ---------------------------- Start pages -------------------------------*/
+.hr-panel .content-area {
+  width: 80%;
+  margin: auto; }
+.hr-panel .search-bar {
+  margin: 100px 0 160px; }
+  .hr-panel .search-bar .box {
+    display: flex; }
+    .hr-panel .search-bar .box .form-group {
+      margin: 0;
+      flex: auto; }
+      .hr-panel .search-bar .box .form-group input {
+        border-radius: 5px 0px 0 5px;
+        border-right: 0; }
+    .hr-panel .search-bar .box .btn {
+      margin: 0;
+      display: block;
+      border-radius: 0px 5px 5px 0; }
+  .hr-panel .search-bar .filters {
+    margin-top: 15px;
+    border-bottom: 1px solid #e1e1e1; }
+    .hr-panel .search-bar .filters ul {
+      margin-bottom: 5px; }
+      .hr-panel .search-bar .filters ul li {
+        display: inline-block;
+        font-size: 14px;
+        margin-right: 20px;
+        color: #999;
+        cursor: pointer; }
+        .hr-panel .search-bar .filters ul li.active {
+          color: #5a5a5a; }
+.hr-panel .actions h4 {
+  font-size: 26px;
+  margin-bottom: 60px; }
+.hr-panel .actions ul {
+  text-align: center; }
+  .hr-panel .actions ul li {
+    display: inline-block;
+    margin: 0 10px;
+    background-color: #36c2b5;
+    border-radius: 5px; }
+    .hr-panel .actions ul li a {
+      padding: 4px 30px;
+      display: inline-block;
+      color: #fff; }
+
+/* ---------------------------- End pages -------------------------------*/
 
 /*# sourceMappingURL=master.css.map */

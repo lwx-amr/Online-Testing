@@ -1,8 +1,10 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const session = require('express-session');
+
 const authRoutes = require('./src/routes/authRoutes');
 const basicRoutes = require('./src/routes/basicRoutes');
-const session = require('express-session');
+const hrRoutes = require('./src/routes/hrRoutes');
 
 // Initialize app
 const app = express();
@@ -43,6 +45,7 @@ mongoose.connect('mongodb://localhost/onlinetesting',{
 // Include routes
 basicRoutes(app);
 authRoutes(app);
+hrRoutes(app);
 
 // Add port to start server
 app.listen(port, function(err){
