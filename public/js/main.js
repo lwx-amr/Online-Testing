@@ -60,4 +60,11 @@ $(function(){
         }
     }
 
+    // Handle add new Answer
+    $('.js-AddAns').on('click', function(){
+        var count = $(this).parent().parent().find('input').length + 1;
+         $(this).parent().parent().append('<input type="text" name="answers[]" value="" placeholder="Answer '+count+'" class="form-control" required>')
+        console.log(count);
+    });
+
 });

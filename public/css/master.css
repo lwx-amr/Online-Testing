@@ -119,50 +119,184 @@ a:focus {
 
 /* ---------------------------- End pages -------------------------------*/
 /* ---------------------------- Start pages -------------------------------*/
-.hr-panel .content-area {
+.hr.hr-panel .content-area {
   width: 80%;
   margin: auto; }
-.hr-panel .search-bar {
-  margin: 100px 0 160px; }
-  .hr-panel .search-bar .box {
+.hr.hr-panel .search-bar {
+  margin: 100px 0 140px; }
+  .hr.hr-panel .search-bar .box {
     display: flex; }
-    .hr-panel .search-bar .box .form-group {
+    .hr.hr-panel .search-bar .box .form-group {
       margin: 0;
       flex: auto; }
-      .hr-panel .search-bar .box .form-group input {
+      .hr.hr-panel .search-bar .box .form-group input {
         border-radius: 5px 0px 0 5px;
         border-right: 0; }
-    .hr-panel .search-bar .box .btn {
+    .hr.hr-panel .search-bar .box .btn {
       margin: 0;
       display: block;
       border-radius: 0px 5px 5px 0; }
-  .hr-panel .search-bar .filters {
+  .hr.hr-panel .search-bar .filters {
     margin-top: 15px;
     border-bottom: 1px solid #e1e1e1; }
-    .hr-panel .search-bar .filters ul {
+    .hr.hr-panel .search-bar .filters ul {
       margin-bottom: 5px; }
-      .hr-panel .search-bar .filters ul li {
+      .hr.hr-panel .search-bar .filters ul li {
         display: inline-block;
         font-size: 14px;
         margin-right: 20px;
         color: #999;
         cursor: pointer; }
-        .hr-panel .search-bar .filters ul li.active {
+        .hr.hr-panel .search-bar .filters ul li.active {
           color: #5a5a5a; }
-.hr-panel .actions h4 {
-  font-size: 26px;
-  margin-bottom: 60px; }
-.hr-panel .actions ul {
+.hr.hr-panel .actions {
+  width: 700px;
+  display: flex; }
+  .hr.hr-panel .actions h4 {
+    font-size: 26px;
+    margin-bottom: 20px; }
+  .hr.hr-panel .actions ul {
+    text-align: center;
+    padding-left: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    .hr.hr-panel .actions ul li {
+      width: auto;
+      margin-bottom: 20px;
+      background-color: #36c2b5;
+      border-radius: 5px;
+      width: 240px; }
+      .hr.hr-panel .actions ul li a {
+        padding: 4px 30px;
+        display: inline-block;
+        color: #fff;
+        width: 100%; }
+.hr.exams-part {
+  padding-bottom: 80px; }
+  .hr.exams-part .content-area {
+    margin-top: 80px; }
+  .hr.exams-part .exam-type {
+    margin-bottom: 50px; }
+  .hr.exams-part .exams {
+    width: 800px; }
+    .hr.exams-part .exams .head {
+      width: 600px;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px; }
+      .hr.exams-part .exams .head .btn {
+        color: #fff;
+        padding: 2px 7px 5px 8px;
+        margin: 0 0 0 10px; }
+        .hr.exams-part .exams .head .btn img {
+          width: 18px; }
+    .hr.exams-part .exams h3 {
+      margin-bottom: 30px; }
+    .hr.exams-part .exams .exam {
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 20px; }
+      .hr.exams-part .exams .exam a {
+        background-color: #e1e1e1;
+        padding: 10px 20px;
+        color: #2a2a2a;
+        display: inline-block;
+        width: 600px; }
+        .hr.exams-part .exams .exam a h6 {
+          margin-bottom: 0px; }
+          .hr.exams-part .exams .exam a h6 span {
+            display: inline-block;
+            margin-left: 20px;
+            font-size: 14px;
+            font-weight: bold; }
+        .hr.exams-part .exams .exam a:hover {
+          background-color: #999; }
+      .hr.exams-part .exams .exam .buttons {
+        display: flex;
+        margin-left: 20px; }
+        .hr.exams-part .exams .exam .buttons button {
+          font-size: 14px;
+          padding: 2px 10px;
+          display: inline-block;
+          margin: 0 10px 0 0; }
+  .hr.exams-part .insert-box {
+    margin-bottom: 60px; }
+    .hr.exams-part .insert-box form {
+      width: 600px; }
+      .hr.exams-part .insert-box form label {
+        font-size: 14px;
+        font-weight: bold; }
+      .hr.exams-part .insert-box form .btn {
+        margin: 0; }
+      .hr.exams-part .insert-box form .quest-insert .form-group {
+        margin-bottom: 10px; }
+      .hr.exams-part .insert-box form .answers {
+        padding: 20px 0 40px 100px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        position: relative; }
+        .hr.exams-part .insert-box form .answers input {
+          flex-basis: 48%;
+          margin-bottom: 10px; }
+      .hr.exams-part .insert-box form .add-new {
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        align-items: center; }
+        .hr.exams-part .insert-box form .add-new span {
+          display: inline-block;
+          padding: 0 20px;
+          font-size: 14px;
+          font-weight: bold;
+          height: 30px;
+          line-height: 30px;
+          background-color: #079ed6;
+          color: #fff;
+          border-radius: 7px;
+          text-align: center;
+          cursor: pointer; }
+        .hr.exams-part .insert-box form .add-new h6 {
+          margin-left: 20px;
+          font-size: 14px;
+          margin-bottom: 0; }
+  .hr.exams-part .quests {
+    width: 600px; }
+    .hr.exams-part .quests .quest {
+      margin-bottom: 40px; }
+      .hr.exams-part .quests .quest .head span {
+        display: inline-block;
+        font-weight: bold;
+        font-size: 14px;
+        margin-left: 40px; }
+    .hr.exams-part .quests .quest-answers {
+      padding: 20px;
+      background-color: #e1e1e1; }
+      .hr.exams-part .quests .quest-answers ul {
+        list-style-type: decimal;
+        margin-bottom: 0; }
+        .hr.exams-part .quests .quest-answers ul li {
+          padding: 5px 0; }
+  .hr.exams-part .positions {
+    width: 600px; }
+    .hr.exams-part .positions .position {
+      border: 1px solid #ccc;
+      margin-bottom: 50px; }
+      .hr.exams-part .positions .position .head {
+        background-color: #ccc;
+        padding: 5px 10px;
+        align-items: center; }
+        .hr.exams-part .positions .position .head h5 {
+          margin-bottom: 0; }
+      .hr.exams-part .positions .position .position-desc {
+        padding: 0 20px; }
+.hr .sidebar {
+  margin-top: 88px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
   text-align: center; }
-  .hr-panel .actions ul li {
-    display: inline-block;
-    margin: 0 10px;
-    background-color: #36c2b5;
-    border-radius: 5px; }
-    .hr-panel .actions ul li a {
-      padding: 4px 30px;
-      display: inline-block;
-      color: #fff; }
 
 /* ---------------------------- End pages -------------------------------*/
 
