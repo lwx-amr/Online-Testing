@@ -3,13 +3,21 @@ const mongoose =  require('mongoose');
 const Schema = mongoose.Schema;
 
 const examSchema = new Schema({
-    name: {
+    applicant_id:{
         type: String,
         required: true
     },
-    type: {
+    position_id:{
         type: String,
         required: true
+    },
+    types: {
+        type : Array,
+        required: true
+    },
+    sequence: {
+        type: Array,
+        required: false
     }
 });
 const ExamModel = mongoose.model('exam',examSchema);

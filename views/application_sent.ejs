@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>OT - Feed</title>
+    <title>OT - Position</title>
 
     <!-- Style -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/master.css">
   </head>
-  <body class="feed">
+  <body class="feed applicant-position">
     <div class="page-content">
       <div class="page-navbar">
         <div class="welcome">
@@ -21,20 +21,8 @@
       </div>
       <div class="content-area">
         <div class="container">
-          <div class="aviable-positions">
-            <h3>available positions</h3>
-            <div class="row">
-              <% for(var i=0 ; i < positions.length ; i++) {%>
-                <div class="col-6">
-                  <div class="position">
-                    <a href="/applicant-position?id=<%=positions[i]._id%>"><h6><%= positions[i].title%></h6></a>
-                    <div class="text">
-                      <p><%= positions[i].description%></p>
-                    </div>
-                  </div>
-                </div>
-              <% } %>
-            </div>
+          <div class="applicant-position">
+            <h3>Application is sent thank you :)</h3>
           </div>
         </div>
       </div>

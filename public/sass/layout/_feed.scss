@@ -23,5 +23,33 @@
       }
     }
   }
+  .applicant-position{
+    padding-top: 100px;
+    .position{
+      border: 1px solid $mlGray;
+      h3{
+        background-color: $mlGray;
+        font-size: 22px;
+        color: #fff;
+        padding: 10px;
+      }
+      .desc{
+        padding: 20px;
+      }
+    }
+    .position-apply{
+      border: 1px solid $mlGray;
+      padding: 20px;
+      form{
+        margin-top: 50px;
+        .form-group{
+          display: flex;
+          label{
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+  }
 }
 /* ---------------------------- End pages -------------------------------*/

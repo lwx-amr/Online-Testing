@@ -26,17 +26,18 @@
               <div class="exams">
                 <h3><%=type.name%></h3>
                 <div class="insert-box">
-                  <form action="/exam-type/edit/<%=type.id%>" method="post">
+                  <form action="/exam-type-edit" method="post">
                     <div class="form-group">
                       <label for="name">Type Name</label>
-                      <input type="text" name="name" id="name" value="<%=type.name%>" class="form-control" required>
+                      <input type="text" name="_id" value="<%=type._id%>" hidden required>
+                      <input type="text" name="name" value="<%=type.name%>" class="form-control" required>
                     </div>
                     <div class="text-right">
                       <input type="submit" name="" value="Save" class="btn btn-success">
                     </div>
                     <br>
                     <br>
-                    <button type="submit" name="button" class="btn btn-danger"  formaction="/exam-type/delete/<%=type._id%>"><img src="icons/trash.svg" alt=""></button>
+                    <a href="/exam-type-delete?id=<%=type._id%>" class="btn btn-danger"><img src="icons/trash.svg" alt=""></a>
                   </form>
                 </div>
               </div>

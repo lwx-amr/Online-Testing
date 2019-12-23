@@ -1,9 +1,10 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const session = require('express-session');
+const upload = require('express-fileupload');
 
 const authRoutes = require('./src/routes/authRoutes');
-const basicRoutes = require('./src/routes/basicRoutes');
+const applicantRoutes = require('./src/routes/applicantRoutes');
 const hrRoutes = require('./src/routes/hrRoutes');
 
 // Initialize app
@@ -18,7 +19,10 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
 // Middleware to handle static files
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
+
+// Middleware for handling file upload
+app.use(upload());
 
 // Session middlewares
 app.use(session({
@@ -32,6 +36,7 @@ app.use(function(req, res, next) {
     if(session.id){
         var username = session.username.split("@"); 
         res.locals.username = username[0];
+        res.locals.email = session.username;
     }
     next();
 });
@@ -42,8 +47,13 @@ mongoose.connect('mongodb://localhost/onlinetesting',{
     useUnifiedTopology: true
 });
 
+// Index Rendering
+app.get('/', function(req, res){
+    res.status(200).render('index');
+});
+
 // Include routes
-basicRoutes(app);
+applicantRoutes(app);
 authRoutes(app);
 hrRoutes(app);
 

@@ -25,7 +25,7 @@
             <h3>Available Questions and Answers</h3>
             <div class="insert-box">
               <h5>Insert new question</h5>
-              <form action="/questions" method="post">
+              <form action="/question" method="post">
                 <div class="form-group">
                   <label for="type">Type</label>
                   <select name="type" id="type" class="form-control" required>
@@ -60,10 +60,8 @@
                   <div class="head">
                     <h5><%= quests[i].name %> <span>- <%= quests[i].type %> </span> </h5>
                     <div class="buttons">
-                      <form>
-                        <button type="submit" name="button" class="btn btn-info" formaction="/exam-type/<%=quests[i]._id%>"><img src="icons/edit.svg" alt=""></button>
-                        <button type="submit" name="button" class="btn btn-danger"  formaction="/question/delete/<%=quests[i]._id%>"><img src="icons/trash.svg" alt=""></button>
-                      </form>
+                      <a href="/question?id=<%=quests[i]._id%>" class="btn btn-info"><img src="icons/edit.svg" alt=""></a>
+                      <a href="/question-delete?id=<%=quests[i]._id%>" class="btn btn-danger" ><img src="icons/trash.svg" alt=""></a>
                     </div>
                   </div> 
                   <div class="quest-answers">

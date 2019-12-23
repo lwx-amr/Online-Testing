@@ -85,6 +85,8 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 10px;
+        background-color: $llGray;
+        padding: 10px 20px;
         .btn{
           color: #fff;
           padding: 2px 7px 5px 8px;
@@ -226,6 +228,29 @@
         .position-desc{
           padding: 0 20px;
         }
+      }
+    }
+    .applicants_requests{
+      width: 600px;
+      .request{
+        padding: 20px;
+        margin-top: 60px;
+        border: 1px solid $mllGray;
+        .head{
+          margin-bottom: 20px;
+        }
+        .buttons{
+          margin-top: 40px;
+          .btn{
+            margin: 0 0 0 20px;
+          }
+        }
+      }
+    }
+    .approve_req{
+      width: 600px;
+      .title{
+        margin: 40px 0 40px;
       }
     }
   }

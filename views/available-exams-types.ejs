@@ -39,21 +39,9 @@
                 <div class="head">
                   <h5><%= types[i].name %></h5>
                   <div class="buttons">
-                    <form>
-                      <button type="submit" name="button" class="btn btn-info" formaction="/exam-type/<%=types[i]._id%>"><img src="icons/edit.svg" alt=""></button>
-                      <button type="submit" name="button" class="btn btn-danger"  formaction="/exam-type/delete/<%=types[i]._id%>"><img src="icons/trash.svg" alt=""></button>
-                    </form>
+                    <a href="/exam-type?id=<%=types[i]._id%>" class="btn btn-info"><img src="icons/edit.svg" alt=""></a>
+                    <a href="/exam-type-delete?id=<%=types[i]._id%>" class="btn btn-danger" ><img src="icons/trash.svg" alt=""></a>
                   </div>
-                </div> 
-                <div class="exam">
-                  <a href="#">
-                    <h6>Software engineer</h6>
-                  </a>
-                </div>
-                <div class="exam">
-                  <a href="#">
-                    <h6>Software engineer</h6>
-                  </a>
                 </div>
               </div>
             <% } %>
