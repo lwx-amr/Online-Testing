@@ -34,9 +34,8 @@ app.use(session({
 // middleware to make 'user' available to all templates
 app.use(function(req, res, next) {
     if(session.id){
-        var username = session.username.split("@"); 
-        res.locals.username = username[0];
-        res.locals.email = session.username;
+        res.locals.username = session.username;
+        res.locals.email = session.id;
     }
     next();
 });

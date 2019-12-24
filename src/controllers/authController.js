@@ -30,18 +30,18 @@ function login(req, res){
         if(err)
             throw err;
         if(!user)
-            return res.status(400).redirect('/login');
+            return res.status(200).redirect('/login');
         else{
-            if(user.password==req.body.password){
-                session.id = user.id;
-                session.username = user.email;
+            if(user.password===req.body.password){
+                session.id = user._id;
+                session.username = user.name;
                 session.rule = user.rule;
                 if(session.rule==='user')
                     return res.status(200).redirect('/feed');
                 if(session.rule==='hr')
                     return res.status(200).redirect('/hr-panel');
             } else {
-                return res.status(400).redirect('/login');
+                return res.status(200).redirect('/login');
             }
         }
     });
@@ -63,7 +63,7 @@ function hrLoginRequired(req, res, next){
 
 function logout(req, res){
     session.id = undefined;
-    session.email = undefined;
+    session.username = undefined;
     session.rule = undefined;
     req.session.destroy(function(err){
         res.status(200).redirect('/');

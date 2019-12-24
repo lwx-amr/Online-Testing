@@ -12,8 +12,7 @@ function renderFeed (req, res, next){
 };
 
 function renderPosition (req, res, next){
-    var username = session.username.split("@"); 
-    AppReqModel.countDocuments({position_id:req.query.id, applicant_id: username[0]}, function(err, data){
+    AppReqModel.countDocuments({position_id:req.query.id, applicant_id: session.id}, function(err, data){
         if(data===1) // To Do not apply twise
             return res.status(200).redirect('/application_sent');
         

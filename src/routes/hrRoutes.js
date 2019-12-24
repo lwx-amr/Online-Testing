@@ -1,5 +1,5 @@
 const { hrLoginRequired } = require('../controllers/authController');
-const { renderPositions, addNewPosition, deletePosition, renderRequests, renderApproveReq, disApproveReq} = require('../controllers/hrController');
+const { renderPositions, addNewPosition, deletePosition, renderRequests, renderApproveReq, disApproveReq, aprroveReq} = require('../controllers/hrController');
 const { renderQuestions, addNewQuestion, viewQuestion, deleteQuestion, editQuestion } = require('../controllers/questionsController');
 const { addNewType, getAllTypes, deleteType, viewType, editType } = require('../controllers/typesController');
 const { createExam } = require('../controllers/examsController');
@@ -41,7 +41,9 @@ function hrRoutes(app){
     // Applicants Request and Exams
     app.get('/applicants-requests', renderRequests);
     
-    app.get('/approve_request', renderApproveReq);
+    app.get('/applicant-request', renderApproveReq);
+    
+    app.post('/approve_request', aprroveReq);
 
     app.get('/disapprove_request', disApproveReq);
     

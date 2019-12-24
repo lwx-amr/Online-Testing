@@ -1,6 +1,6 @@
 const nodemailer = require('nodemailer');
 
-const {TypeModel, PositionModel} = require('../models/hrModels');
+const {QuestionModel, TypeModel, PositionModel} = require('../models/hrModels');
 const {AppReqModel} = require('../models/applicantModels');
 
 function renderPositions(req, res){
@@ -41,6 +41,8 @@ function renderApproveReq(req, res){
         if(err)            
             return res.status(400).send(err);
         AppReqModel.findById(req.query.id, function(err, data){
+            if(err)            
+                return res.status(400).send(err);
             return res.status(200).render('approve_request', {types:findedTypes, request: data});
         })
     });
@@ -79,7 +81,48 @@ function disApproveReq(req, res){
     });
 }
 
+function aprroveReq(req, res){
+    let exam = {
+        applicant_id : "",
+        position_id : "",
+        dead_line:"",
+        types : [],
+        questions : [] 
+    };
+
+    // Create Exam
+    exam.applicant_id = req.body.applicant_id;
+    exam.position_id = req.body.position_id;
+    exam.types = req.body.types;
+
+    var lastRandom = null;
+    // Loop to get each type question
+    for(var i = 0 ; i < exam.types.length ; i++){
+        let curType = exam.types[i];
+        QuestionModel.find({type:curType}, function(err, typeQuestions){
+            if(err)
+                console.log(err);
+
+            let count  = typeQuestions.length;
+            
+            // Get a random entry
+            let random = Math.floor(Math.random() * count);
+            while(random==lastRandom)
+                random = Math.floor(Math.random() * count);
+            //console.log(typeQuestions[random].name);
+            let question = {
+                name : typeQuestions[random].name,
+                answers: typeQuestions[random].answers
+            };
+            exam.questions.push(question);
+            lastRandom = random;
+            console.log(exam);
+        });
+    }
+};
+
 module.exports = {
     renderPositions, addNewPosition, deletePosition, 
-    renderRequests, renderApproveReq, disApproveReq
+    renderRequests, renderApproveReq, disApproveReq,
+    aprroveReq
 };
